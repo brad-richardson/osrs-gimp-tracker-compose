@@ -1,4 +1,19 @@
-
+version: "3.9"
 
 services:
+  frontend: 
+    build: 
+      context: ./osrs-gimp-tracker-frontend
+      args:
+        - BACKEND_URL=${BACKEND_URL}
+    ports:
+      - 5000:5000
+  
+  backend:
+    build: ./osrs-gimp-tracker-backend
+    environment:
+      - GIMPTRACKER_PASSWORD
+    ports:
+      - 5001:5000
+
 

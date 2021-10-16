@@ -1,8 +1,11 @@
 
+`git clone https://github.com/Rachnus/osrs-gimp-tracker-frontend`
 
-Clone https://github.com/Rachnus/osrs-gimp-tracker-frontend
-Clone https://github.com/Rachnus/osrs-gimp-tracker-backend
+`git clone https://github.com/Rachnus/osrs-gimp-tracker-backend`
 
-Run docker-compose --build up -d
+Update values in .env to match where the server is hosted and secure password
 
-To update - pull updates to both repos, run docker-compose --build up -d
+`docker-compose --build up -d`
+
+To update - git pull in both cloned repo folders, run `docker-compose down && docker-compose --build up -d`
+
